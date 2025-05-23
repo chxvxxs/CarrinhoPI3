@@ -18,8 +18,10 @@ export default function ArtisansPage() {
       location: "Olinda, PE",
       rating: 4.8,
       reviews: 124,
-      description: "Artesã especializada em rendas tradicionais e bordados feitos à mão, com mais de 30 anos de experiência.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
+      description:
+        "Artesã especializada em rendas tradicionais e bordados feitos à mão, com mais de 30 anos de experiência.",
+      image:
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
       productCount: 15,
       featured: true,
     },
@@ -31,7 +33,8 @@ export default function ArtisansPage() {
       rating: 4.9,
       reviews: 87,
       description: "Mestre ceramista que cria peças únicas inspiradas na cultura popular do agreste pernambucano.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
+      image:
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
       productCount: 23,
       featured: true,
     },
@@ -43,7 +46,8 @@ export default function ArtisansPage() {
       rating: 4.7,
       reviews: 56,
       description: "Produtora de doces tradicionais pernambucanos, como bolo de rolo, cartola e cocada.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
+      image:
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
       productCount: 18,
       featured: false,
     },
@@ -55,7 +59,8 @@ export default function ArtisansPage() {
       rating: 4.6,
       reviews: 42,
       description: "Fabricante de instrumentos musicais tradicionais nordestinos, como rabeca, zabumba e triângulo.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
+      image:
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
       productCount: 12,
       featured: false,
     },
@@ -67,7 +72,8 @@ export default function ArtisansPage() {
       rating: 4.9,
       reviews: 78,
       description: "Grupo de mulheres artesãs que produzem peças em cerâmica, mantendo viva a tradição local.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
+      image:
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
       productCount: 31,
       featured: true,
     },
@@ -79,7 +85,8 @@ export default function ArtisansPage() {
       rating: 4.8,
       reviews: 63,
       description: "Escultor que trabalha com madeira e barro, criando peças que retratam o folclore nordestino.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
+      image:
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E",
       productCount: 19,
       featured: false,
     },
@@ -90,10 +97,11 @@ export default function ArtisansPage() {
 
   // Filtrar artesãos com base na pesquisa e categoria
   const filteredArtisans = artisans.filter((artisan) => {
-    const matchesSearch = artisan.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         artisan.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesSearch =
+      artisan.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      artisan.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === "all" || artisan.category === selectedCategory
-    
+
     return matchesSearch && matchesCategory
   })
 
@@ -106,7 +114,8 @@ export default function ArtisansPage() {
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Artesãos</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Conheça os talentosos artesãos e produtores que mantêm viva a tradição e a cultura pernambucana através de seu trabalho
+          Conheça os talentosos artesãos e produtores que mantêm viva a tradição e a cultura pernambucana através de seu
+          trabalho
         </p>
       </div>
 
@@ -222,23 +231,24 @@ export default function ArtisansPage() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              strokeWidth="2"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
                 d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
             <h3 className="text-lg font-medium text-gray-800 mb-2">Nenhum artesão encontrado</h3>
-            <p className="text-gray-600">
-              Tente ajustar seus filtros ou termos de busca para encontrar o que procura.
-            </p>
+            <p className="text-gray-600">Tente ajustar seus filtros ou termos de busca para encontrar o que procura.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArtisans.map((artisan) => (
-              <div key={artisan.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow">
+              <div
+                key={artisan.id}
+                className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow"
+              >
                 <div className="flex md:flex-col">
                   <div className="w-1/3 md:w-full h-32 md:h-48 bg-gray-100">
                     <Image
@@ -253,4 +263,29 @@ export default function ArtisansPage() {
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">{artisan.name}</h3>
                     <p className="text-[#FF6B35] font-medium text-sm mb-2">{artisan.category}</p>
                     <div className="flex items-center mb-2">
-                      <MapPin className="h\
+                      <MapPin className="h-4 w-4 text-gray-500 mr-1" />
+                      <span className="text-sm text-gray-600">{artisan.location}</span>
+                    </div>
+                    <div className="flex items-center mb-3">
+                      <div className="flex items-center">
+                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-700 ml-1">{artisan.rating}</span>
+                      </div>
+                      <span className="text-sm text-gray-500 ml-2">({artisan.reviews} avaliações)</span>
+                    </div>
+                    <a
+                      href={`/artesaos/${artisan.id}`}
+                      className="block w-full text-center py-2 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors mt-3"
+                    >
+                      Ver perfil
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}

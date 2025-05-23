@@ -40,7 +40,17 @@ export default function ProductCard({ product, viewMode = "grid" }) {
                     </div>
                   </div>
                   <span
-                    className={`inline-block text-xs px-2 py-1 rounded bg-${product.tag.color}-100 text-${product.tag.color}-800`}
+                    className={`inline-block text-xs px-2 py-1 rounded ${
+                      product.tag.color === "green"
+                        ? "bg-green-100 text-green-800"
+                        : product.tag.color === "blue"
+                          ? "bg-blue-100 text-blue-800"
+                          : product.tag.color === "yellow"
+                            ? "bg-yellow-100 text-yellow-800"
+                            : product.tag.color === "orange"
+                              ? "bg-orange-100 text-orange-800"
+                              : "bg-gray-100 text-gray-800"
+                    }`}
                   >
                     {product.tag.text}
                   </span>
@@ -99,7 +109,19 @@ export default function ProductCard({ product, viewMode = "grid" }) {
 
         <div className="p-4">
           <div className="flex items-center justify-between mb-2">
-            <span className={`text-xs px-2 py-1 rounded bg-${product.tag.color}-100 text-${product.tag.color}-800`}>
+            <span
+              className={`inline-block text-xs px-2 py-1 rounded ${
+                product.tag.color === "green"
+                  ? "bg-green-100 text-green-800"
+                  : product.tag.color === "blue"
+                    ? "bg-blue-100 text-blue-800"
+                    : product.tag.color === "yellow"
+                      ? "bg-yellow-100 text-yellow-800"
+                      : product.tag.color === "orange"
+                        ? "bg-orange-100 text-orange-800"
+                        : "bg-gray-100 text-gray-800"
+              }`}
+            >
               {product.tag.text}
             </span>
             <div className="flex items-center">

@@ -1,5 +1,13 @@
-import CartPage from "@/components/cart-page"
+import HomePage from "@/components/home/home-page"
+import Footer from "@/components/footer"
 
 export default function Home() {
-  return <CartPage />
+  return (
+    <>
+      <main>
+        <HomePage />
+      </main>
+      <Footer />
+    </>
+  )
 }
