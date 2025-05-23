@@ -1,4 +1,18 @@
-"use client"
+... shell ...
+
+Vou
+atualizar
+a
+navbar
+para
+incluir
+links
+para
+todas as páginas
+do site:
+
+```typescriptreact file="components/navbar.jsx"
+[v0-no-op-code-block-prefix]"use client"
 
 import { useState } from "react"
 import Link from "next/link"
