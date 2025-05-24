@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 
 export default function OrderSummary() {
   // Estado para o cupom
@@ -158,9 +159,12 @@ export default function OrderSummary() {
       </div>
 
       {/* Botões de ação */}
-      <button className="w-full py-3 bg-[#FF6B35] text-white rounded-md font-medium hover:bg-[#e85a2a] transition-colors btn-primary">
+      <Link
+        href="/checkout"
+        className="w-full py-3 bg-[#FF6B35] text-white rounded-md font-medium hover:bg-[#e85a2a] transition-colors btn-primary text-center block"
+      >
         Finalizar Compra
-      </button>
+      </Link>
 
       <button className="w-full mt-3 py-3 border border-gray-300 text-gray-700 rounded-md font-medium hover:bg-gray-50 transition-colors btn-outline">
         Continuar Comprando
