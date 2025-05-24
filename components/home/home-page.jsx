@@ -161,31 +161,33 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-[#FF6B35] text-white py-16 md:py-24">
+      <section className="relative bg-[#FF6B35] text-white py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Descubra o melhor de Pernambuco</h1>
-              <p className="text-xl mb-8">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                Descubra o melhor de Pernambuco
+              </h1>
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
                 Produtos artesanais, doces regionais e muito mais, diretamente dos artesãos para sua casa.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
                   href="/produtos"
-                  className="px-6 py-3 bg-white text-[#FF6B35] font-medium rounded-md hover:bg-gray-100 transition-colors"
+                  className="px-6 py-3 bg-white text-[#FF6B35] font-medium rounded-md hover:bg-gray-100 transition-colors text-center"
                 >
                   Explorar produtos
                 </Link>
                 <Link
                   href="/artesaos"
-                  className="px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors"
+                  className="px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors text-center"
                 >
                   Conhecer artesãos
                 </Link>
               </div>
             </div>
-            <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-md">
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <div className="relative w-full max-w-sm sm:max-w-md">
                 <div className="bg-white p-4 rounded-lg shadow-lg">
                   <Image
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3Cpolyline points='9 22 9 12 15 12 15 22'%3E%3C/polyline%3E%3C/svg%3E"
@@ -195,49 +197,52 @@ export default function HomePage() {
                     className="w-full h-auto rounded"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
-                  <div className="text-[#FF6B35] font-bold">+200</div>
-                  <div className="text-gray-600 text-sm">Artesãos</div>
+                <div className="absolute -bottom-2 sm:-bottom-4 -right-2 sm:-right-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg">
+                  <div className="text-[#FF6B35] font-bold text-sm sm:text-base">+200</div>
+                  <div className="text-gray-600 text-xs sm:text-sm">Artesãos</div>
                 </div>
-                <div className="absolute -top-4 -left-4 bg-white p-3 rounded-lg shadow-lg">
-                  <div className="text-[#FF6B35] font-bold">+1000</div>
-                  <div className="text-gray-600 text-sm">Produtos</div>
+                <div className="absolute -top-2 sm:-top-4 -left-2 sm:-left-4 bg-white p-2 sm:p-3 rounded-lg shadow-lg">
+                  <div className="text-[#FF6B35] font-bold text-sm sm:text-base">+1000</div>
+                  <div className="text-gray-600 text-xs sm:text-sm">Produtos</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="absolute bottom-0 left-0 right-0 h-16 bg-white"
+          className="absolute bottom-0 left-0 right-0 h-8 sm:h-12 md:h-16 bg-white"
           style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0)" }}
         ></div>
       </section>
 
       {/* Categorias */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Categorias</h2>
-            <Link href="/produtos" className="text-[#FF6B35] font-medium flex items-center hover:underline">
-              Ver todas <ChevronRight className="h-5 w-5 ml-1" />
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Categorias</h2>
+            <Link
+              href="/produtos"
+              className="text-[#FF6B35] font-medium flex items-center hover:underline text-sm sm:text-base"
+            >
+              Ver todas <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 ml-1" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             {categories.map((category) => (
               <Link key={category.id} href={`/produtos?categoria=${category.id}`}>
-                <div className="bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 mx-auto bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mb-3">
+                <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 text-center hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mb-2 sm:mb-3">
                     <Image
                       src={category.image || "/placeholder.svg"}
                       alt={category.name}
                       width={40}
                       height={40}
-                      className="w-10 h-10 text-[#FF6B35]"
+                      className="w-6 h-6 sm:w-10 sm:h-10 text-[#FF6B35]"
                     />
                   </div>
-                  <h3 className="font-medium text-gray-800">{category.name}</h3>
-                  <p className="text-sm text-gray-500">{category.count} produtos</p>
+                  <h3 className="font-medium text-gray-800 text-sm sm:text-base">{category.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">{category.count} produtos</p>
                 </div>
               </Link>
             ))}
@@ -246,20 +251,23 @@ export default function HomePage() {
       </section>
 
       {/* Produtos em destaque */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Produtos em Destaque</h2>
-            <Link href="/produtos" className="text-[#FF6B35] font-medium flex items-center hover:underline">
-              Ver todos <ChevronRight className="h-5 w-5 ml-1" />
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Produtos em Destaque</h2>
+            <Link
+              href="/produtos"
+              className="text-[#FF6B35] font-medium flex items-center hover:underline text-sm sm:text-base"
+            >
+              Ver todos <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 ml-1" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {featuredProducts.map((product) => (
               <Link key={product.id} href={`/produtos/${product.id}`}>
                 <div className="bg-white border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="h-48 bg-gray-100 overflow-hidden">
+                  <div className="h-40 sm:h-48 bg-gray-100 overflow-hidden">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}
@@ -269,7 +277,7 @@ export default function HomePage() {
                     />
                   </div>
 
-                  <div className="p-4">
+                  <div className="p-3 sm:p-4">
                     <div className="flex items-center justify-between mb-2">
                       <span
                         className={`text-xs px-2 py-1 rounded ${
@@ -287,24 +295,26 @@ export default function HomePage() {
                         {product.tag.text}
                       </span>
                       <div className="flex items-center">
-                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-600 ml-1">{product.rating}</span>
+                        <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400 fill-current" />
+                        <span className="text-xs sm:text-sm text-gray-600 ml-1">{product.rating}</span>
                       </div>
                     </div>
 
-                    <h3 className="font-medium text-gray-800 mb-1">{product.name}</h3>
-                    <p className="text-sm text-gray-500 mb-2">Vendido por: {product.seller}</p>
+                    <h3 className="font-medium text-gray-800 mb-1 text-sm sm:text-base line-clamp-2">{product.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-2 truncate">Vendido por: {product.seller}</p>
 
                     <div className="flex justify-between items-center">
                       <div>
-                        <p className="font-semibold text-[#FF6B35]">R$ {product.price.toFixed(2).replace(".", ",")}</p>
+                        <p className="font-semibold text-[#FF6B35] text-sm sm:text-base">
+                          R$ {product.price.toFixed(2).replace(".", ",")}
+                        </p>
                         {product.originalPrice && (
                           <p className="text-xs text-gray-500 line-through">
                             R$ {product.originalPrice.toFixed(2).replace(".", ",")}
                           </p>
                         )}
                       </div>
-                      <button className="px-3 py-1.5 bg-[#FF6B35] text-white text-sm rounded hover:bg-[#e85a2a] transition-colors">
+                      <button className="px-2 sm:px-3 py-1 sm:py-1.5 bg-[#FF6B35] text-white text-xs sm:text-sm rounded hover:bg-[#e85a2a] transition-colors">
                         Comprar
                       </button>
                     </div>
@@ -317,12 +327,12 @@ export default function HomePage() {
       </section>
 
       {/* Banner promocional */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h2 className="text-3xl font-bold mb-4">Sabores de Pernambuco</h2>
-              <p className="text-lg mb-6">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Sabores de Pernambuco</h2>
+              <p className="text-base sm:text-lg mb-6">
                 Descubra os doces e iguarias tradicionais que fazem parte da cultura pernambucana. Do bolo de rolo à
                 cartola, temos as melhores opções para você experimentar.
               </p>
@@ -333,18 +343,18 @@ export default function HomePage() {
                 Explorar doces regionais
               </Link>
             </div>
-            <div className="md:w-1/2 flex justify-center">
-              <div className="relative">
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <div className="relative max-w-sm sm:max-w-md">
                 <Image
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'%3E%3Ccircle cx='12' cy='8' r='7'%3E%3C/circle%3E%3Cpolyline points='8.21 13.89 7 23 12 20 17 23 15.79 13.88'%3E%3C/polyline%3E%3C/svg%3E"
                   alt="Doces regionais de Pernambuco"
                   width={400}
                   height={300}
-                  className="rounded-lg shadow-lg"
+                  className="rounded-lg shadow-lg w-full h-auto"
                 />
-                <div className="absolute -bottom-4 -right-4 bg-[#FF6B35] p-3 rounded-lg shadow-lg">
-                  <div className="text-white font-bold">15% OFF</div>
-                  <div className="text-white text-sm">Primeira compra</div>
+                <div className="absolute -bottom-2 sm:-bottom-4 -right-2 sm:-right-4 bg-[#FF6B35] p-2 sm:p-3 rounded-lg shadow-lg">
+                  <div className="text-white font-bold text-sm sm:text-base">15% OFF</div>
+                  <div className="text-white text-xs sm:text-sm">Primeira compra</div>
                 </div>
               </div>
             </div>
@@ -353,21 +363,24 @@ export default function HomePage() {
       </section>
 
       {/* Artesãos em destaque */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Artesãos em Destaque</h2>
-            <Link href="/artesaos" className="text-[#FF6B35] font-medium flex items-center hover:underline">
-              Ver todos <ChevronRight className="h-5 w-5 ml-1" />
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Artesãos em Destaque</h2>
+            <Link
+              href="/artesaos"
+              className="text-[#FF6B35] font-medium flex items-center hover:underline text-sm sm:text-base"
+            >
+              Ver todos <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 ml-1" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {featuredArtisans.map((artisan) => (
               <Link key={artisan.id} href={`/artesaos/${artisan.id}`}>
                 <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow">
-                  <div className="flex items-center p-6">
-                    <div className="w-20 h-20 bg-gray-100 rounded-full overflow-hidden mr-4">
+                  <div className="flex items-center p-4 sm:p-6">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-100 rounded-full overflow-hidden mr-3 sm:mr-4 flex-shrink-0">
                       <Image
                         src={artisan.image || "/placeholder.svg"}
                         alt={artisan.name}
@@ -376,14 +389,14 @@ export default function HomePage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-800">{artisan.name}</h3>
-                      <p className="text-[#FF6B35]">{artisan.category}</p>
-                      <p className="text-sm text-gray-600">{artisan.location}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-800 truncate">{artisan.name}</h3>
+                      <p className="text-[#FF6B35] text-sm sm:text-base truncate">{artisan.category}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 truncate">{artisan.location}</p>
                     </div>
                   </div>
-                  <div className="px-6 pb-6">
-                    <button className="w-full py-2 border border-[#FF6B35] text-[#FF6B35] rounded-md hover:bg-[#FF6B35] hover:bg-opacity-10 transition-colors">
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                    <button className="w-full py-2 border border-[#FF6B35] text-[#FF6B35] rounded-md hover:bg-[#FF6B35] hover:bg-opacity-10 transition-colors text-sm">
                       Ver perfil e produtos
                     </button>
                   </div>
@@ -395,27 +408,27 @@ export default function HomePage() {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-8 sm:mb-12">
             O que nossos clientes dizem
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-sm">
+              <div key={testimonial.id} className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                      className={`h-4 w-4 sm:h-5 sm:w-5 ${i < testimonial.rating ? "text-yellow-400 fill-current" : "text-gray-300"}`}
                     />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
+                <p className="text-gray-700 mb-4 text-sm sm:text-base">"{testimonial.text}"</p>
                 <div>
-                  <p className="font-medium text-gray-800">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <p className="font-medium text-gray-800 text-sm sm:text-base">{testimonial.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-500">{testimonial.location}</p>
                 </div>
               </div>
             ))}
@@ -424,10 +437,10 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#FF6B35] text-white">
+      <section className="py-12 sm:py-16 bg-[#FF6B35] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Junte-se à comunidade Recifeirinha</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Junte-se à comunidade Recifeirinha</h2>
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto">
             Cadastre-se agora e receba ofertas exclusivas, novidades sobre produtos artesanais e muito mais!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -448,14 +461,14 @@ export default function HomePage() {
       </section>
 
       {/* Informações adicionais */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#FF6B35]"
+                  className="h-6 w-6 sm:h-8 sm:w-8 text-[#FF6B35]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -463,17 +476,17 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Produtos Autênticos</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Produtos Autênticos</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 Todos os produtos são feitos por artesãos locais, garantindo autenticidade e qualidade.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#FF6B35]"
+                  className="h-6 w-6 sm:h-8 sm:w-8 text-[#FF6B35]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -486,17 +499,17 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Preços Justos</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Preços Justos</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 Valorizamos o trabalho dos artesãos com preços justos, beneficiando produtores e consumidores.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#FF6B35]"
+                  className="h-6 w-6 sm:h-8 sm:w-8 text-[#FF6B35]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -509,8 +522,8 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Entrega Segura</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Entrega Segura</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 Embalagens especiais garantem que seus produtos cheguem em perfeito estado, em todo o Brasil.
               </p>
             </div>

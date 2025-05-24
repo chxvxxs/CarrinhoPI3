@@ -46,16 +46,16 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h1>
-        <p className="text-xl text-gray-600">Estamos aqui para ajudar e responder suas dúvidas</p>
+    <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
+      <div className="text-center mb-8 sm:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h1>
+        <p className="text-lg sm:text-xl text-gray-600">Estamos aqui para ajudar e responder suas dúvidas</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Informações de contato */}
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Informações de Contato</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6">Informações de Contato</h2>
 
           <div className="space-y-6">
             <div className="flex items-start">
@@ -65,9 +65,9 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-1">E-mail</h3>
-                <p className="text-gray-600">contato@recifeirinha.com.br</p>
-                <p className="text-gray-600">suporte@recifeirinha.com.br</p>
+                <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-1">E-mail</h3>
+                <p className="text-gray-600 text-sm sm:text-base">contato@recifeirinha.com.br</p>
+                <p className="text-gray-600 text-sm sm:text-base">suporte@recifeirinha.com.br</p>
               </div>
             </div>
 
@@ -78,9 +78,9 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-1">Telefone</h3>
-                <p className="text-gray-600">(81) 3333-4444</p>
-                <p className="text-gray-600">(81) 98765-4321 (WhatsApp)</p>
+                <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-1">Telefone</h3>
+                <p className="text-gray-600 text-sm sm:text-base">(81) 3333-4444</p>
+                <p className="text-gray-600 text-sm sm:text-base">(81) 98765-4321 (WhatsApp)</p>
               </div>
             </div>
 
@@ -91,28 +91,28 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-1">Endereço</h3>
-                <p className="text-gray-600">Av. Rio Branco, 123</p>
-                <p className="text-gray-600">Recife Antigo, Recife - PE</p>
-                <p className="text-gray-600">CEP: 50030-310</p>
+                <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-1">Endereço</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Av. Rio Branco, 123</p>
+                <p className="text-gray-600 text-sm sm:text-base">Recife Antigo, Recife - PE</p>
+                <p className="text-gray-600 text-sm sm:text-base">CEP: 50030-310</p>
               </div>
             </div>
           </div>
 
           <div className="mt-8">
-            <h3 className="text-lg font-medium text-gray-800 mb-4">Horário de Atendimento</h3>
+            <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-4">Horário de Atendimento</h3>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-700 mb-2 text-sm sm:text-base">
                 <span className="font-medium">Segunda a Sexta:</span> 9h às 18h
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-sm sm:text-base">
                 <span className="font-medium">Sábado:</span> 9h às 13h
               </p>
             </div>
           </div>
 
           <div className="mt-8">
-            <h3 className="text-lg font-medium text-gray-800 mb-4">Redes Sociais</h3>
+            <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-4">Redes Sociais</h3>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -152,28 +152,28 @@ export default function ContactPage() {
 
         {/* Formulário de contato */}
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Envie uma Mensagem</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6">Envie uma Mensagem</h2>
 
           {success ? (
-            <div className="bg-green-50 p-6 rounded-lg text-center">
+            <div className="bg-green-50 p-4 sm:p-6 rounded-lg text-center">
               <div className="flex justify-center mb-4">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
                   <MessageSquare className="h-6 w-6" />
                 </div>
               </div>
-              <h3 className="text-lg font-medium text-green-800 mb-2">Mensagem enviada com sucesso!</h3>
-              <p className="text-green-700 mb-4">
+              <h3 className="text-base sm:text-lg font-medium text-green-800 mb-2">Mensagem enviada com sucesso!</h3>
+              <p className="text-green-700 mb-4 text-sm sm:text-base">
                 Obrigado por entrar em contato. Nossa equipe responderá o mais breve possível.
               </p>
               <button
                 onClick={() => setSuccess(false)}
-                className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+                className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors text-sm sm:text-base"
               >
                 Enviar nova mensagem
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               {error && <div className="p-3 bg-red-50 text-red-500 rounded-md text-sm">{error}</div>}
 
               <div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35] text-sm sm:text-base"
                   required
                 />
               </div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35] text-sm sm:text-base"
                   required
                 />
               </div>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35] text-sm sm:text-base"
                   required
                 >
                   <option value="">Selecione um assunto</option>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35] text-sm sm:text-base"
                   required
                 ></textarea>
               </div>
@@ -245,13 +245,13 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex items-center justify-center px-6 py-3 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors disabled:opacity-50"
+                className="w-full flex items-center justify-center px-6 py-3 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors disabled:opacity-50 text-sm sm:text-base"
               >
                 {isLoading ? (
                   "Enviando..."
                 ) : (
                   <>
-                    <Send className="h-5 w-5 mr-2" />
+                    <Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                     Enviar mensagem
                   </>
                 )}
@@ -262,19 +262,21 @@ export default function ContactPage() {
       </div>
 
       {/* Mapa */}
-      <div className="mt-16">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Nossa Localização</h2>
-        <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
+      <div className="mt-12 sm:mt-16">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6">Nossa Localização</h2>
+        <div className="bg-gray-100 rounded-lg h-64 sm:h-80 flex items-center justify-center">
           <div className="text-center">
-            <MapPin className="h-12 w-12 text-[#FF6B35] mx-auto mb-4" />
-            <p className="text-gray-600">Av. Rio Branco, 123 - Recife Antigo, Recife - PE, CEP: 50030-310</p>
+            <MapPin className="h-8 w-8 sm:h-12 sm:w-12 text-[#FF6B35] mx-auto mb-4" />
+            <p className="text-gray-600 text-sm sm:text-base">
+              Av. Rio Branco, 123 - Recife Antigo, Recife - PE, CEP: 50030-310
+            </p>
           </div>
         </div>
       </div>
 
       {/* FAQ */}
-      <div className="mt-16">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Perguntas Frequentes</h2>
+      <div className="mt-12 sm:mt-16">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6">Perguntas Frequentes</h2>
         <div className="space-y-4">
           {[
             {
@@ -299,8 +301,8 @@ export default function ContactPage() {
             },
           ].map((faq, index) => (
             <div key={index} className="border rounded-lg p-4">
-              <h3 className="font-medium text-gray-800 mb-2">{faq.question}</h3>
-              <p className="text-gray-600">{faq.answer}</p>
+              <h3 className="font-medium text-gray-800 mb-2 text-sm sm:text-base">{faq.question}</h3>
+              <p className="text-gray-600 text-sm sm:text-base">{faq.answer}</p>
             </div>
           ))}
         </div>

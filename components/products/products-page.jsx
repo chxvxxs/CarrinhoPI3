@@ -121,19 +121,19 @@ export default function ProductsPage() {
   const totalPages = Math.ceil(allProducts.length / itemsPerPage)
 
   return (
-    <div>
+    <div className="container mx-auto px-4 py-6 sm:py-8">
       {/* Cabeçalho da página */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">Produtos Artesanais</h1>
-        <p className="text-gray-600">Descubra o melhor da cultura pernambucana</p>
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Produtos Artesanais</h1>
+        <p className="text-gray-600 text-sm sm:text-base">Descubra o melhor da cultura pernambucana</p>
       </div>
 
       {/* Barra de ferramentas */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-        <div className="flex items-center gap-4">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+            className="flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors text-sm sm:text-base"
           >
             <Filter className="h-4 w-4 mr-2" />
             Filtros
@@ -141,13 +141,13 @@ export default function ProductsPage() {
           <span className="text-sm text-gray-600">{allProducts.length} produtos encontrados</span>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
           {/* Ordenação */}
-          <div className="relative">
+          <div className="relative w-full sm:w-auto">
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="appearance-none bg-white border border-gray-300 rounded-md px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35]"
+              className="appearance-none bg-white border border-gray-300 rounded-md px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-[#FF6B35] w-full sm:w-auto text-sm"
             >
               <option value="relevance">Mais relevantes</option>
               <option value="price-low">Menor preço</option>
@@ -176,10 +176,10 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      <div className="flex gap-8">
+      <div className="flex gap-6 lg:gap-8">
         {/* Filtros laterais */}
         {showFilters && (
-          <div className="w-64 flex-shrink-0">
+          <div className="w-full lg:w-64 flex-shrink-0 mb-6 lg:mb-0">
             <ProductFilters />
           </div>
         )}
@@ -188,7 +188,9 @@ export default function ProductsPage() {
         <div className="flex-1">
           <div
             className={
-              viewMode === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" : "space-y-4"
+              viewMode === "grid"
+                ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
+                : "space-y-4"
             }
           >
             {currentProducts.map((product) => (
@@ -199,11 +201,11 @@ export default function ProductsPage() {
           {/* Paginação */}
           {totalPages > 1 && (
             <div className="flex justify-center mt-8">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1 sm:space-x-2">
                 <button
                   onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
-                  className="px-3 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
+                  className="px-2 sm:px-3 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 text-sm"
                 >
                   Anterior
                 </button>
@@ -212,7 +214,7 @@ export default function ProductsPage() {
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
-                    className={`px-3 py-2 border rounded-md ${
+                    className={`px-2 sm:px-3 py-2 border rounded-md text-sm ${
                       currentPage === page
                         ? "bg-[#FF6B35] text-white border-[#FF6B35]"
                         : "border-gray-300 hover:bg-gray-50"
@@ -225,7 +227,7 @@ export default function ProductsPage() {
                 <button
                   onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-3 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
+                  className="px-2 sm:px-3 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 text-sm"
                 >
                   Próximo
                 </button>
