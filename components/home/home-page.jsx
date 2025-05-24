@@ -231,7 +231,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             {categories.map((category) => (
               <Link key={category.id} href={`/produtos?categoria=${category.id}`}>
-                <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 text-center hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 text-center hover:shadow-md transition-shadow h-full flex flex-col">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-[#FF6B35] bg-opacity-10 rounded-full flex items-center justify-center mb-2 sm:mb-3">
                     <Image
                       src={category.image || "/placeholder.svg"}
@@ -241,8 +241,10 @@ export default function HomePage() {
                       className="w-6 h-6 sm:w-10 sm:h-10 text-[#FF6B35]"
                     />
                   </div>
-                  <h3 className="font-medium text-gray-800 text-sm sm:text-base">{category.name}</h3>
-                  <p className="text-xs sm:text-sm text-gray-500">{category.count} produtos</p>
+                  <div className="flex-1 flex flex-col justify-center">
+                    <h3 className="font-medium text-gray-800 text-sm sm:text-base mb-1">{category.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500">{category.count} produtos</p>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -266,7 +268,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {featuredProducts.map((product) => (
               <Link key={product.id} href={`/produtos/${product.id}`}>
-                <div className="bg-white border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white border rounded-lg overflow-hidden hover:shadow-md transition-shadow h-full flex flex-col">
                   <div className="h-40 sm:h-48 bg-gray-100 overflow-hidden">
                     <Image
                       src={product.image || "/placeholder.svg"}
@@ -277,7 +279,7 @@ export default function HomePage() {
                     />
                   </div>
 
-                  <div className="p-3 sm:p-4">
+                  <div className="p-3 sm:p-4 flex-1 flex flex-col">
                     <div className="flex items-center justify-between mb-2">
                       <span
                         className={`text-xs px-2 py-1 rounded ${
@@ -300,10 +302,12 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <h3 className="font-medium text-gray-800 mb-1 text-sm sm:text-base line-clamp-2">{product.name}</h3>
+                    <h3 className="font-medium text-gray-800 mb-1 text-sm sm:text-base line-clamp-2 flex-1">
+                      {product.name}
+                    </h3>
                     <p className="text-xs sm:text-sm text-gray-500 mb-2 truncate">Vendido por: {product.seller}</p>
 
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center mt-auto">
                       <div>
                         <p className="font-semibold text-[#FF6B35] text-sm sm:text-base">
                           R$ {product.price.toFixed(2).replace(".", ",")}
@@ -378,8 +382,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {featuredArtisans.map((artisan) => (
               <Link key={artisan.id} href={`/artesaos/${artisan.id}`}>
-                <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow">
-                  <div className="flex items-center p-4 sm:p-6">
+                <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow h-full">
+                  <div className="flex items-center p-4 sm:p-6 h-full">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-100 rounded-full overflow-hidden mr-3 sm:mr-4 flex-shrink-0">
                       <Image
                         src={artisan.image || "/placeholder.svg"}
@@ -393,12 +397,10 @@ export default function HomePage() {
                       <h3 className="text-base sm:text-lg font-semibold text-gray-800 truncate">{artisan.name}</h3>
                       <p className="text-[#FF6B35] text-sm sm:text-base truncate">{artisan.category}</p>
                       <p className="text-xs sm:text-sm text-gray-600 truncate">{artisan.location}</p>
+                      <button className="w-full mt-3 py-2 border border-[#FF6B35] text-[#FF6B35] rounded-md hover:bg-[#FF6B35] hover:bg-opacity-10 transition-colors text-sm">
+                        Ver perfil e produtos
+                      </button>
                     </div>
-                  </div>
-                  <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-                    <button className="w-full py-2 border border-[#FF6B35] text-[#FF6B35] rounded-md hover:bg-[#FF6B35] hover:bg-opacity-10 transition-colors text-sm">
-                      Ver perfil e produtos
-                    </button>
                   </div>
                 </div>
               </Link>
@@ -416,7 +418,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
+              <div key={testimonial.id} className="bg-white p-4 sm:p-6 rounded-lg shadow-sm h-full flex flex-col">
                 <div className="flex items-center mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
@@ -425,8 +427,8 @@ export default function HomePage() {
                     />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 text-sm sm:text-base">"{testimonial.text}"</p>
-                <div>
+                <p className="text-gray-700 mb-4 text-sm sm:text-base flex-1">"{testimonial.text}"</p>
+                <div className="mt-auto">
                   <p className="font-medium text-gray-800 text-sm sm:text-base">{testimonial.name}</p>
                   <p className="text-xs sm:text-sm text-gray-500">{testimonial.location}</p>
                 </div>

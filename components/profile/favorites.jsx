@@ -62,10 +62,10 @@ export default function Favorites() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {favorites.map((product) => (
-            <div key={product.id} className="border rounded-lg p-4 relative group">
+            <div key={product.id} className="border rounded-lg p-4 relative group h-full flex flex-col">
               <button
                 onClick={() => removeFromFavorites(product.id)}
-                className="absolute top-2 right-2 p-1.5 bg-white rounded-full shadow-sm text-gray-400 hover:text-red-500 transition-colors"
+                className="absolute top-2 right-2 p-1.5 bg-white rounded-full shadow-sm text-gray-400 hover:text-red-500 transition-colors z-10"
               >
                 <Trash2 className="h-4 w-4" />
               </button>
@@ -80,20 +80,22 @@ export default function Favorites() {
                 />
               </div>
 
-              <h3 className="font-medium text-gray-800">{product.name}</h3>
-              <p className="text-sm text-gray-500">Vendido por: {product.seller}</p>
-              <div className="flex justify-between items-center mt-2">
-                <div>
-                  <p className="font-semibold text-[#FF6B35]">R$ {product.price.toFixed(2).replace(".", ",")}</p>
-                  {product.originalPrice && (
-                    <p className="text-xs text-gray-500 line-through">
-                      R$ {product.originalPrice.toFixed(2).replace(".", ",")}
-                    </p>
-                  )}
+              <div className="flex-1 flex flex-col">
+                <h3 className="font-medium text-gray-800 line-clamp-2 flex-1">{product.name}</h3>
+                <p className="text-sm text-gray-500 truncate">Vendido por: {product.seller}</p>
+                <div className="flex justify-between items-center mt-2">
+                  <div>
+                    <p className="font-semibold text-[#FF6B35]">R$ {product.price.toFixed(2).replace(".", ",")}</p>
+                    {product.originalPrice && (
+                      <p className="text-xs text-gray-500 line-through">
+                        R$ {product.originalPrice.toFixed(2).replace(".", ",")}
+                      </p>
+                    )}
+                  </div>
+                  <button className="px-3 py-1.5 bg-[#FF6B35] text-white text-sm rounded hover:bg-[#e85a2a] transition-colors">
+                    Comprar
+                  </button>
                 </div>
-                <button className="px-3 py-1.5 bg-[#FF6B35] text-white text-sm rounded hover:bg-[#e85a2a] transition-colors">
-                  Comprar
-                </button>
               </div>
             </div>
           ))}

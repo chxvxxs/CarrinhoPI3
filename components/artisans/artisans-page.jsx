@@ -171,7 +171,10 @@ export default function ArtisansPage() {
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Artesãos em Destaque</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredArtisans.map((artisan) => (
-              <div key={artisan.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100">
+              <div
+                key={artisan.id}
+                className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 h-full flex flex-col"
+              >
                 <div className="relative">
                   <div className="h-48 bg-gray-100">
                     <Image
@@ -186,7 +189,7 @@ export default function ArtisansPage() {
                     Destaque
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{artisan.name}</h3>
                   <p className="text-[#FF6B35] font-medium mb-2">{artisan.category}</p>
                   <div className="flex items-center mb-3">
@@ -201,10 +204,10 @@ export default function ArtisansPage() {
                     <span className="text-sm text-gray-500 ml-2">({artisan.reviews} avaliações)</span>
                     <span className="text-sm text-gray-500 ml-auto">{artisan.productCount} produtos</span>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{artisan.description}</p>
+                  <p className="text-gray-600 text-sm mb-4 flex-1 line-clamp-3">{artisan.description}</p>
                   <a
                     href={`/artesaos/${artisan.id}`}
-                    className="block w-full text-center py-2 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors"
+                    className="block w-full text-center py-2 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors mt-auto"
                   >
                     Ver perfil e produtos
                   </a>
@@ -247,10 +250,10 @@ export default function ArtisansPage() {
             {filteredArtisans.map((artisan) => (
               <div
                 key={artisan.id}
-                className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow h-full flex flex-col"
               >
-                <div className="flex md:flex-col">
-                  <div className="w-1/3 md:w-full h-32 md:h-48 bg-gray-100">
+                <div className="flex md:flex-col h-full">
+                  <div className="w-1/3 md:w-full h-32 md:h-48 bg-gray-100 flex-shrink-0">
                     <Image
                       src={artisan.image || "/placeholder.svg"}
                       alt={artisan.name}
@@ -259,14 +262,14 @@ export default function ArtisansPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="w-2/3 md:w-full p-4 md:p-6">
+                  <div className="w-2/3 md:w-full p-4 md:p-6 flex-1 flex flex-col">
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">{artisan.name}</h3>
                     <p className="text-[#FF6B35] font-medium text-sm mb-2">{artisan.category}</p>
                     <div className="flex items-center mb-2">
                       <MapPin className="h-4 w-4 text-gray-500 mr-1" />
                       <span className="text-sm text-gray-600">{artisan.location}</span>
                     </div>
-                    <div className="flex items-center mb-3">
+                    <div className="flex items-center mb-3 flex-1">
                       <div className="flex items-center">
                         <Star className="h-4 w-4 text-yellow-400 fill-current" />
                         <span className="text-sm text-gray-700 ml-1">{artisan.rating}</span>
@@ -275,7 +278,7 @@ export default function ArtisansPage() {
                     </div>
                     <a
                       href={`/artesaos/${artisan.id}`}
-                      className="block w-full text-center py-2 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors mt-3"
+                      className="block w-full text-center py-2 bg-[#FF6B35] text-white rounded-md hover:bg-[#e85a2a] transition-colors mt-auto"
                     >
                       Ver perfil
                     </a>

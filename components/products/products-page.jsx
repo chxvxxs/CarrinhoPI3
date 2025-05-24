@@ -194,7 +194,9 @@ export default function ProductsPage() {
             }
           >
             {currentProducts.map((product) => (
-              <ProductCard key={product.id} product={product} viewMode={viewMode} />
+              <div key={product.id} className={viewMode === "grid" ? "h-full" : ""}>
+                <ProductCard product={product} viewMode={viewMode} />
+              </div>
             ))}
           </div>
 

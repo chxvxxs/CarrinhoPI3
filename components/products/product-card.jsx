@@ -86,8 +86,8 @@ export default function ProductCard({ product, viewMode = "grid" }) {
   }
 
   return (
-    <Link href={`/produtos/${product.id}`} className="block">
-      <div className="bg-white border rounded-lg overflow-hidden hover:shadow-md transition-shadow relative">
+    <Link href={`/produtos/${product.id}`} className="block h-full">
+      <div className="bg-white border rounded-lg overflow-hidden hover:shadow-md transition-shadow relative h-full flex flex-col">
         <button
           onClick={toggleFavorite}
           className={`absolute top-2 right-2 z-10 p-2 rounded-full bg-white shadow-sm ${
@@ -107,7 +107,7 @@ export default function ProductCard({ product, viewMode = "grid" }) {
           />
         </div>
 
-        <div className="p-4">
+        <div className="p-4 flex-1 flex flex-col">
           <div className="flex items-center justify-between mb-2">
             <span
               className={`inline-block text-xs px-2 py-1 rounded ${
@@ -130,10 +130,10 @@ export default function ProductCard({ product, viewMode = "grid" }) {
             </div>
           </div>
 
-          <h3 className="font-medium text-gray-800 mb-1">{product.name}</h3>
-          <p className="text-sm text-gray-500 mb-2">Vendido por: {product.seller}</p>
+          <h3 className="font-medium text-gray-800 mb-1 line-clamp-2 flex-1">{product.name}</h3>
+          <p className="text-sm text-gray-500 mb-2 truncate">Vendido por: {product.seller}</p>
 
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mt-auto">
             <div>
               <p className="font-semibold text-[#FF6B35]">R$ {product.price.toFixed(2).replace(".", ",")}</p>
               {product.originalPrice && (
